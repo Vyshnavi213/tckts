@@ -1,0 +1,32 @@
+<div>
+    <div class="dateclass">
+        {{this.date}}
+        <br>
+        {{this.day}}
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-4 mb-3" *ngFor="let event of specialEvents">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{{event.name}}</h5>
+                    <p class="card-text">{{event.description}}</p>
+                    <div routerLinkActive="active">
+                        <!-- <a class="btn btn-success" (click)="added()">Add to cart</a> -->
+                        <!-- <div class="pri">
+                            <button mat-raised-button color="primary" (click)="added()">Add to cart</button>
+                        </div> -->
+                        <div class="pri">
+                            <button mat-raised-button color="primary" (click)="openAlertDialog()">Add to cart</button>
+                        </div>
+                        <!-- <a routerLink="/cart" class="btn btn-success">Add to cart</a> -->
+                        <!-- <button mat-raised-button color="primary" (click)= "added()">Add to cart</button> -->
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <!-- {{event.date | date:'shortDate'}} -->
+                    Books available: {{event.books}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
